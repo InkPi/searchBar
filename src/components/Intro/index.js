@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; //always put for react file
 
 //capital for custom components
 //no need for () if only 1 argument
