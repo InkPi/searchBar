@@ -22,7 +22,7 @@ class Series extends Component {
   // }
 
 //string interpolation
-//have to be ticks
+//have to be ticks; string interpolation
 //value seriesName not shown unless setState in here
   onSeriesInputChange = e => {
     this.setState({ seriesName : e.target.value, isFetching: true });
@@ -40,16 +40,35 @@ class Series extends Component {
     return (
 
       <div>
-        The length of series array - {this.state.series.length}
         <div>
           <input value={seriesName}
            type="text"
           onChange={this.onSeriesInputChange} />
         </div>
-        <SeriesList list={this.state.series} />
+        {
+          !isFetching && series.length === 0 && seriesName.trim() === ''
+          &&
+          <p>Please enter series name into input</p>
+        }
+        {
+          !isFetching && series.length === 0 && seriesName.trim() !== ''
+          &&
+          <p>No TV series have been found with this title</p>
+        }
+        {
+          isFetching && <p>Loading...</p>
+        }
+        {
+          !isFetching && <SeriesList list={this.state.series} />
+        }
       </div>
     )
   }
 }
+// The length of series array - {this.state.series.length}
+  //and if = empty string
+  //if fetching true { isFetching &&}
+  //<SeriesList list={this.state.series} />
+  //add !isFetching before the last 2 so loading and <p> render same line + replace
 
 export default Series;
