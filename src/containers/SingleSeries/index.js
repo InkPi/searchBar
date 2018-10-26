@@ -16,6 +16,7 @@ class SingleSeries extends Component {
   }
 
   render() {
+    const { show } = this.state;
     //console.log(this.props);
     //<p>...{this.props.match.params.id</p>
     return (
