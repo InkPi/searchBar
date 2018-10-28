@@ -20,11 +20,20 @@ class SingleSeries extends Component {
     console.log(show);
     //console.log(this.props);
     //<p>...{this.props.match.params.id</p>
+    //have to div group
     return (
       <div>
         { show === null && <Loader />}
         { show !== null &&
-          <p>Show has been loaded</p>
+          <div>
+            <h3>{show.name}</h3>
+            <p>
+              <img alt="Show" src={show.image.medium}/>
+            </p>
+            <p>Premiered - {show.premiered}</p>
+            <p>Rating - {show.rating.average}</p>
+            <p>Episodes - {show._embedded.episodes.length}</p>
+          </div>
         }
       </div>
     )
