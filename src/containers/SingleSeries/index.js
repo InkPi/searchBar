@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Loader from '../../components/loader';
+import Loader from '../../components/Loader';
 
 //console folder match>params>id
 class SingleSeries extends Component {
@@ -17,11 +17,15 @@ class SingleSeries extends Component {
 
   render() {
     const { show } = this.state;
+    console.log(show);
     //console.log(this.props);
     //<p>...{this.props.match.params.id</p>
     return (
       <div>
-        <p>Single Series - the show id will be</p>
+        { show === null && <Loader />}
+        { show !== null &&
+          <p>Show has been loaded</p>
+        }
       </div>
     )
   }
