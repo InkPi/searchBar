@@ -31,3 +31,15 @@ a {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+img {
+  width: auto;
+  height:auto;
+  margin: 0 auto;
+  float: left;
+  margin-left: 30%;
+}
+
+.details {
+  margin-right: 30%;
+}

@@ -27,6 +27,7 @@ class SingleSeries extends Component {
         { show !== null &&
           <div>
             <h3>{show.name}</h3>
+            <div className="details">
             <p>
               <img alt="Show" src={show.image.medium}/>
             </p>
@@ -34,6 +35,7 @@ class SingleSeries extends Component {
             <p>Rating - {show.rating.average}</p>
             <p>Episodes - {show._embedded.episodes.length}</p>
           </div>
+        </div>
         }
       </div>
     )
