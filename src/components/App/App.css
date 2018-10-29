@@ -33,13 +33,15 @@ a {
 }
 
 img {
-  width: auto;
-  height:auto;
-  margin: 0 auto;
   float: left;
-  margin-left: 30%;
+}
+
+.singlePageContent {
+  width: 330px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .details {
-  margin-right: 30%;
+  margin-left: 2%;
 }

@@ -25,16 +25,16 @@ class SingleSeries extends Component {
       <div>
         { show === null && <Loader />}
         { show !== null &&
-          <div>
+          <div className="singlePageContent">
             <h3>{show.name}</h3>
-            <div className="details">
             <p>
               <img alt="Show" src={show.image.medium}/>
             </p>
-            <p>Premiered - {show.premiered}</p>
-            <p>Rating - {show.rating.average}</p>
-            <p>Episodes - {show._embedded.episodes.length}</p>
-          </div>
+            <div className="details">
+              <p>Premiered - {show.premiered}</p>
+              <p>Rating - {show.rating.average}</p>
+              <p>Episodes - {show._embedded.episodes.length}</p>
+            </div>
         </div>
         }
       </div>
