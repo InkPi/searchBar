@@ -43,5 +43,11 @@ img {
 }
 
 .details {
-  margin-left: 2%;
+  margin-left: 20px;
+  width: 100px;
+  float:left;
+}
+
+.details p {
+  float: left;
 }
