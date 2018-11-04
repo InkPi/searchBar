@@ -2,6 +2,11 @@ Deployed project for view: http://search-app.surge.sh/
 
 Search Bar using a movies API (Project created using React)
 
+## What I Learned
+- Learned about containers and the difference between that and components
+- Gained more experience with REST API
+- How to deploy using Surge
+
 *Listed Below are defaulted placeholders that I need to delete and add*
 
 ## Table of Contents
